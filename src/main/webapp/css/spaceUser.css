@@ -12,14 +12,17 @@ html {
 }
 
 div.container {
-    height: auto;
+    grid-gap: 10px;
+    padding: 5px;
     display: grid;
     align-items: center;
-    /* grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr; */
+    grid-template-columns: 30% 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "h h h" "m map map" "m map map";
 }
 
 div.header {
+    grid-area: h;
     margin: auto;
     width: 100%;
     position: relative;
@@ -53,37 +56,42 @@ div.header img {
 }
 
 div.menu {
-    margin: 15px 15px;
-    width: 250px;
-    height: 200px;
+    grid-area: m;
+    width: 70%;
+    height: auto;
     display: grid;
-    /* padding: 3px; */
-    border-right: 1px solid #552f80;
-    border-left: 1px solid #552f80;
+    padding: 3px;
+    background: #552f80;
     border-radius: 5px;
     font-weight: bold;
-    justify-items: center;
+    justify-items: start;
+    align-self: flex-start;
 }
 
 div.menu ul {
     display: grid;
     grid-template-rows: .5fr .5fr .5fr;
     height: auto;
+    background: #552f80;
 }
 
 div.menu li {
-    margin: 10px 0;
+    margin: 25px 2px;
     list-style: none;
+}
+
+span.text-menu {
+    margin: 5px;
 }
 
 button.btn-menu {
     transition: .1s;
     font-size: 12pt;
     border: none;
-    background: #fff;
+    background: #542e7f;
     cursor: pointer;
     text-transform: uppercase;
-    color: #552f80;
+    color: #fff;
 }
 
 button.btn-menu:hover {
@@ -96,13 +104,11 @@ button.btn-menu:focus {
 }
 
 div.map {
-    position: absolute;
-    top: 70%;
-    left: 70%;
-    transform: translate(-70%, -70%);
+    grid-area: map;
+    position: relative;
     background: #a10909;
-    width: 900px;
-    height: 500px;
     border-radius: 5px;
-    display: grid;
+    align-self: flex-start;
+    display: none;
+    visibility: hidden
 }
