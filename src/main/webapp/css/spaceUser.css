@@ -114,3 +114,7 @@ div.map {
     display: none;
     visibility: hidden;
 }
+
+div.cod-cabinets {
+    display: none;
+}

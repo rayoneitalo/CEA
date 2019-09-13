@@ -2,6 +2,7 @@
 let divContainerElement = document.querySelector('.container');
 let divElementMap = document.querySelector('.map');
 let btnMenuElement = document.querySelector('button[id=btn-menu]');
+let divElementCodCabinets = document.querySelector('.cod-cabinets');
 
 // Criando elementos na DOM
 let divElement = document.createElement('div');
@@ -17,8 +18,7 @@ btnElementClose.setAttribute('class', 'btn-menu');
 
 
 
-
-// Chama a função que renderiza a div map
+// Cha      ma a função que renderiza a div map
 btnMenuElement.onclick = reder;
 
 
@@ -28,4 +28,9 @@ btnMenuElement.onclick = reder;
 function reder() {
     divElementMap.style.display = "grid";
     divElementMap.style.visibility = "visible";
+}
+
+function functionB1() {
+    divElementCodCabinets.style.display = "flex";
+    divElementCodCabinets.style.visibility = "visible";
 }
